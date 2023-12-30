@@ -99,9 +99,6 @@ const InfiniteList = React.memo(
     };
 
     const renderFooter = () => {
-      if (initialLoading || !hasMore) {
-        return <>{SkeletonComponent && <SkeletonComponent />}</>;
-      }
       return loading ? (
         <ActivityIndicator
           size={24}
