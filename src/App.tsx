@@ -3,12 +3,19 @@ import {
   initialWindowMetrics,
   SafeAreaProvider,
 } from 'react-native-safe-area-context';
-import {Text} from 'react-native';
+import {AppNavigator} from './navigators/AppNavigator';
+import {useInitialRootStore} from './store';
 
 const App: React.FC = () => {
+  const {rehydrated} = useInitialRootStore(() => {});
+
+  if (!rehydrated) {
+    return null;
+  }
+
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-      <Text>Test</Text>
+      <AppNavigator />
     </SafeAreaProvider>
   );
 };

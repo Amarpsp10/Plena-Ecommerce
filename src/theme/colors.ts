@@ -12,6 +12,10 @@ const palette = {
   primary200: '#153075',
   secondary100: '#FFC83A',
   secondary200: '#F9B023',
+
+  grey100: '#8891A5',
+
+  red100: '#FF8181',
 } as const;
 
 export const colors = {
@@ -23,7 +27,7 @@ export const colors = {
   //text colors
   text: palette.neutral800,
   textLabel: palette.neutral600,
-  textDim: palette.neutral500,
+  textDim: palette.grey100,
   textTitle: palette.neutral700,
   textHeader: palette.primary100,
 
